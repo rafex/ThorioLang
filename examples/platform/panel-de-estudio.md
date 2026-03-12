@@ -1,0 +1,62 @@
+# Panel de estudio
+
+Ejemplo integrado con listas, archivos, validacion de existencia, SQLite y limpieza opcional.
+
+```thorio
+funcion unirTareas(tareas: lista_texto) retorna texto
+  definir indice como entero
+  definir salida como texto
+
+  indice = 0
+  salida = ""
+
+  mientras indice < longitud(tareas) hacer
+    si indice == 0 entonces
+      salida = tareas[indice]
+    si_no
+      salida = salida + " -> " + tareas[indice]
+    fin_si
+    indice = indice + 1
+  fin_mientras
+
+  retornar salida
+fin_funcion
+
+inicio
+  definir carpeta como texto
+  definir archivo como texto
+  definir base como texto
+  definir tareas como lista_texto
+  definir tareasLeidas como lista_texto
+  definir filas como lista_texto
+  definir existe como logico
+
+  carpeta = crear_directorio("examples/platform/sandbox/panel")
+  archivo = carpeta + "/plan.md"
+  base = carpeta + "/panel.sqlite"
+
+  tareas = ["Leer", "Practicar", "Repasar"]
+  guardar_lineas(archivo, tareas)
+  tareasLeidas = leer_lineas(archivo)
+  existe = existe_archivo(archivo)
+
+  sqlite_ejecutar(base, "create table if not exists panel(nombre text, estado text)")
+  sqlite_ejecutar(base, "delete from panel")
+  sqlite_ejecutar(base, "insert into panel(nombre, estado) values ('Leer', 'hecho')")
+  sqlite_ejecutar(base, "insert into panel(nombre, estado) values ('Practicar', 'pendiente')")
+  sqlite_ejecutar(base, "insert into panel(nombre, estado) values ('Repasar', 'pendiente')")
+
+  filas = sqlite_consultar_filas(base, "select nombre, estado from panel order by nombre")
+
+  mostrar_mensaje("Archivo listo: " + existe)
+  mostrar_mensaje("Plan: " + unirTareas(tareasLeidas))
+  mostrar_mensaje("Panel: " + unirTareas(filas))
+
+  si confirmar("¿Eliminar el plan guardado?") entonces
+    eliminar_archivo(archivo)
+    mostrar_mensaje("Archivo eliminado")
+  si_no
+    mostrar_mensaje("Archivo conservado")
+  fin_si
+fin
+```
