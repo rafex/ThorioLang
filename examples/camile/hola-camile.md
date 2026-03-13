@@ -1,3 +1,12 @@
+---
+runtime: camile
+uses:
+  - thorio
+  - camile
+ide_web_runnable: false
+ide_web_reason: "Requiere dialogos visuales de Camile y no es apto para el IDE web."
+---
+
 # Hola Camile
 
 Ejemplo visual basico con ventanas de entrada, mensaje y confirmacion.

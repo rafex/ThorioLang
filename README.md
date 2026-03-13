@@ -26,6 +26,7 @@ Este repositorio esta pensado para personas que quieren:
 - Los diagramas usan Mermaid cuando ayudan a explicar mejor una idea.
 - Los ejemplos usan notacion real de Thorio.
 - Los ejemplos pueden inspirarse en el repositorio tecnico `Thorio`, pero aqui se adaptan para ensenanza.
+- Cada archivo en `examples/` incluye frontmatter con `runtime`, `uses`, `ide_web_runnable` e `ide_web_reason`.
 
 ## Primer recorrido recomendado
 

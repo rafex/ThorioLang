@@ -1,3 +1,12 @@
+---
+runtime: julie
+uses:
+  - thorio
+  - julie
+ide_web_runnable: true
+ide_web_reason: "Usa archivos con Julie y puede ejecutarse en un workspace temporal del IDE web."
+---
+
 # Guardar y leer texto
 
 Ejemplo basico de persistencia con archivos usando Julie.

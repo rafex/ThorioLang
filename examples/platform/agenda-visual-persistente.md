@@ -1,3 +1,13 @@
+---
+runtime: platform
+uses:
+  - thorio
+  - camile
+  - julie
+ide_web_runnable: false
+ide_web_reason: "Combina Camile y Julie; la parte visual de Camile no es apta para el IDE web."
+---
+
 # Agenda visual persistente
 
 Ejemplo integrado con entrada visual, SQLite y exportacion a texto.

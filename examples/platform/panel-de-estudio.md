@@ -1,3 +1,13 @@
+---
+runtime: platform
+uses:
+  - thorio
+  - camile
+  - julie
+ide_web_runnable: false
+ide_web_reason: "Combina Camile y Julie; la parte visual de Camile no es apta para el IDE web."
+---
+
 # Panel de estudio
 
 Ejemplo integrado con listas, archivos, validacion de existencia, SQLite y limpieza opcional.

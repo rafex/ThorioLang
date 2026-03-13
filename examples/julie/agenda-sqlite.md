@@ -1,3 +1,12 @@
+---
+runtime: julie
+uses:
+  - thorio
+  - julie
+ide_web_runnable: true
+ide_web_reason: "Usa SQLite con Julie y puede ejecutarse en el entorno temporal del IDE web."
+---
+
 # Agenda SQLite
 
 Ejemplo de almacenamiento estructurado con SQLite usando Julie.
