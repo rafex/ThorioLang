@@ -1,3 +1,12 @@
+---
+runtime: julie
+uses:
+  - thorio
+  - julie
+ide_web_runnable: true
+ide_web_reason: "Usa Julie y puede ejecutarse en el entorno temporal del IDE web."
+---
+
 # SQLite metricas de estudio
 
 Crea una base de datos, inserta registros y consulta resultados agregados.

@@ -1,3 +1,12 @@
+---
+runtime: julie
+uses:
+  - thorio
+  - julie
+ide_web_runnable: true
+ide_web_reason: "Usa Julie y puede ejecutarse en el entorno temporal del IDE web."
+---
+
 # Inventario en Markdown
 
 Guarda una lista de articulos en un archivo Markdown y despues la vuelve a leer.

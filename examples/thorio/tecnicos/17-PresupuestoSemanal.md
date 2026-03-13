@@ -1,3 +1,11 @@
+---
+runtime: thorio
+uses:
+  - thorio
+ide_web_runnable: true
+ide_web_reason: "Usa solo el lenguaje base y puede ejecutarse en el IDE web."
+---
+
 # Presupuesto semanal
 
 Usa funciones, listas y comparaciones para resumir gastos.

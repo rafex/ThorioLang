@@ -1,3 +1,12 @@
+---
+runtime: camile
+uses:
+  - thorio
+  - camile
+ide_web_runnable: false
+ide_web_reason: "Usa Camile y requiere dialogos de escritorio, por lo que no es apto para el IDE web."
+---
+
 # Tablero de animo
 
 Muestra listas como texto y usa dialogos para elegir un estado inicial.

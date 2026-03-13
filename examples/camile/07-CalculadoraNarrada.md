@@ -1,3 +1,12 @@
+---
+runtime: camile
+uses:
+  - thorio
+  - camile
+ide_web_runnable: false
+ide_web_reason: "Usa Camile y requiere dialogos de escritorio, por lo que no es apto para el IDE web."
+---
+
 # Calculadora narrada
 
 Muestra calculos del lenguaje base dentro de una experiencia visual.
